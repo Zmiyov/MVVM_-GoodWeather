@@ -75,10 +75,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ybd-JB-Gsj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZE-XU-uUE">
+                                <rect key="frame" x="16" y="86" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-qq-Wk7">
+                                <rect key="frame" x="164.66666666666666" y="158" width="61" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveCityButtonPressed" destination="NMa-Zo-dFe" eventType="touchUpInside" id="1QJ-79-ssi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AFI-BT-Z6m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AFI-BT-Z6m" firstAttribute="trailing" secondItem="CZE-XU-uUE" secondAttribute="trailing" constant="16" id="1eG-LW-pf8"/>
+                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="Ybd-JB-Gsj" secondAttribute="centerX" id="5hv-qI-KLL"/>
+                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="Ybd-JB-Gsj" secondAttribute="centerX" id="6PC-4i-eZO"/>
+                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="CZE-XU-uUE" secondAttribute="centerX" id="HHn-QW-Q63"/>
+                            <constraint firstItem="AFI-BT-Z6m" firstAttribute="bottom" secondItem="ab8-qq-Wk7" secondAttribute="bottom" constant="595" id="RLn-SL-6YY"/>
+                            <constraint firstItem="CZE-XU-uUE" firstAttribute="leading" secondItem="AFI-BT-Z6m" secondAttribute="leading" constant="16" id="Yml-gy-VJc"/>
+                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="top" secondItem="CZE-XU-uUE" secondAttribute="bottom" constant="38" id="c8K-w1-dtU"/>
+                            <constraint firstItem="CZE-XU-uUE" firstAttribute="top" secondItem="AFI-BT-Z6m" secondAttribute="top" constant="30" id="noK-dS-AF4"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="City" id="EzW-mM-kJC"/>
+                    <navigationItem key="navigationItem" title="City" id="EzW-mM-kJC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kDK-eZ-uvi">
+                            <connections>
+                                <action selector="close" destination="NMa-Zo-dFe" id="jTI-7R-Yrx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="CZE-XU-uUE" id="Q0b-0T-WpX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kd3-bG-sB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
