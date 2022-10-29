@@ -14,6 +14,7 @@
 		A5DC75AB290D83B200BDBD95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DC75A9290D83B200BDBD95 /* LaunchScreen.storyboard */; };
 		A5DC75B4290D870F00BDBD95 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DC75B3290D870F00BDBD95 /* WeatherListTableViewController.swift */; };
 		A5DC75B6290D883300BDBD95 /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DC75B5290D883300BDBD95 /* AddWeatherCityViewController.swift */; };
+		A5DC75B9290D96E700BDBD95 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DC75B8290D96E700BDBD95 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A5DC75AC290D83B200BDBD95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DC75B3290D870F00BDBD95 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
 		A5DC75B5290D883300BDBD95 /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
+		A5DC75B8290D96E700BDBD95 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		A5DC759D290D83B000BDBD95 /* MVVM_ GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				A5DC75B7290D96D500BDBD95 /* CustomCells */,
 				A5DC759E290D83B000BDBD95 /* AppDelegate.swift */,
 				A5DC75A0290D83B000BDBD95 /* SceneDelegate.swift */,
 				A5DC75B2290D86C200BDBD95 /* Controllers */,
@@ -76,6 +79,14 @@
 				A5DC75B5290D883300BDBD95 /* AddWeatherCityViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5DC75B7290D96D500BDBD95 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC75B8290D96E700BDBD95 /* WeatherCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				A5DC75B4290D870F00BDBD95 /* WeatherListTableViewController.swift in Sources */,
 				A5DC759F290D83B000BDBD95 /* AppDelegate.swift in Sources */,
+				A5DC75B9290D96E700BDBD95 /* WeatherCell.swift in Sources */,
 				A5DC75B6290D883300BDBD95 /* AddWeatherCityViewController.swift in Sources */,
 				A5DC75A1290D83B000BDBD95 /* SceneDelegate.swift in Sources */,
 			);
@@ -305,6 +317,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,6 +346,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

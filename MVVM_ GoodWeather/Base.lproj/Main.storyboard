@@ -17,13 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="n9q-D8-lr7">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="n9q-D8-lr7" customClass="WeatherCell" customModule="MVVM__GoodWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9q-D8-lr7" id="0oC-FJ-Bb6">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HA-lE-o3D">
+                                            <rect key="frame" x="294" y="31" width="76" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjh-Dg-LCX">
+                                            <rect key="frame" x="20" y="37" width="52" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3HA-lE-o3D" firstAttribute="top" secondItem="0oC-FJ-Bb6" secondAttribute="top" constant="31" id="V49-Ug-fuf"/>
+                                        <constraint firstItem="Vjh-Dg-LCX" firstAttribute="top" secondItem="0oC-FJ-Bb6" secondAttribute="top" constant="37" id="cbl-We-u7h"/>
+                                        <constraint firstAttribute="trailing" secondItem="3HA-lE-o3D" secondAttribute="trailing" constant="20" symbolic="YES" id="v7h-qt-VLv"/>
+                                        <constraint firstItem="Vjh-Dg-LCX" firstAttribute="leading" secondItem="0oC-FJ-Bb6" secondAttribute="leading" constant="20" symbolic="YES" id="v9b-Tt-hSe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="Vjh-Dg-LCX" id="Dgh-tO-08o"/>
+                                    <outlet property="temperatureLabel" destination="3HA-lE-o3D" id="I0m-1B-E2h"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -100,6 +124,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
