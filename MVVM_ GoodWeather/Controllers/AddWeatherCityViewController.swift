@@ -14,6 +14,23 @@ class AddWeatherCityViewController: UIViewController {
     
     @IBAction func saveCityButtonPressed() {
         
+        print("save")
+        
+        if let city = cityNameTextField.text {
+            
+            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(Constants.key)&units=imperial")!
+            
+            let weatherResource = Resource<Any>(url: weatherURL) { data in
+                
+                return data
+            }
+            
+            WebService().load(resource: weatherResource) { result in
+                
+            }
+            
+        }
+        
     }
     
     @IBAction func close() {

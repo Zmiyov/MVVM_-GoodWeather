@@ -81,12 +81,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-qq-Wk7">
-                                <rect key="frame" x="164.66666666666666" y="158" width="61" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucr-yf-nFa">
+                                <rect key="frame" x="164.66666666666666" y="200" width="61" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="saveCityButtonPressed" destination="NMa-Zo-dFe" eventType="touchUpInside" id="1QJ-79-ssi"/>
+                                    <action selector="saveCityButtonPressed" destination="NMa-Zo-dFe" eventType="touchUpInside" id="Kdf-J0-2Ep"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,13 +94,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AFI-BT-Z6m" firstAttribute="trailing" secondItem="CZE-XU-uUE" secondAttribute="trailing" constant="16" id="1eG-LW-pf8"/>
-                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="Ybd-JB-Gsj" secondAttribute="centerX" id="5hv-qI-KLL"/>
-                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="Ybd-JB-Gsj" secondAttribute="centerX" id="6PC-4i-eZO"/>
-                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="centerX" secondItem="CZE-XU-uUE" secondAttribute="centerX" id="HHn-QW-Q63"/>
-                            <constraint firstItem="AFI-BT-Z6m" firstAttribute="bottom" secondItem="ab8-qq-Wk7" secondAttribute="bottom" constant="595" id="RLn-SL-6YY"/>
+                            <constraint firstItem="ucr-yf-nFa" firstAttribute="top" secondItem="CZE-XU-uUE" secondAttribute="bottom" constant="80" id="YGP-hh-Qqx"/>
                             <constraint firstItem="CZE-XU-uUE" firstAttribute="leading" secondItem="AFI-BT-Z6m" secondAttribute="leading" constant="16" id="Yml-gy-VJc"/>
-                            <constraint firstItem="ab8-qq-Wk7" firstAttribute="top" secondItem="CZE-XU-uUE" secondAttribute="bottom" constant="38" id="c8K-w1-dtU"/>
                             <constraint firstItem="CZE-XU-uUE" firstAttribute="top" secondItem="AFI-BT-Z6m" secondAttribute="top" constant="30" id="noK-dS-AF4"/>
+                            <constraint firstItem="ucr-yf-nFa" firstAttribute="centerX" secondItem="Ybd-JB-Gsj" secondAttribute="centerX" id="scD-04-e5G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="City" id="EzW-mM-kJC">
