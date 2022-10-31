@@ -22,7 +22,9 @@ class AddWeatherCityViewController: UIViewController {
             
             let weatherResource = Resource<Any>(url: weatherURL) { data in
                 
-                return data
+                let weatherViewModel = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
+                
+                return weatherViewModel
             }
             
             WebService().load(resource: weatherResource) { result in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53D2FAE290FBB8C0070B3E1 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D2FAD290FBB8C0070B3E1 /* WeatherListViewModel.swift */; };
 		A5C51715290F1BC800FF9C09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C51714290F1BC800FF9C09 /* Constants.swift */; };
 		A5DC759F290D83B000BDBD95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DC759E290D83B000BDBD95 /* AppDelegate.swift */; };
 		A5DC75A1290D83B000BDBD95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DC75A0290D83B000BDBD95 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53D2FAD290FBB8C0070B3E1 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		A5C51714290F1BC800FF9C09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5DC759B290D83B000BDBD95 /* MVVM_ GoodWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM_ GoodWeather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DC759E290D83B000BDBD95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53D2FAC290FBB630070B3E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A53D2FAD290FBB8C0070B3E1 /* WeatherListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A5DC7592290D83B000BDBD95 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		A5DC759D290D83B000BDBD95 /* MVVM_ GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				A53D2FAC290FBB630070B3E1 /* ViewModels */,
 				A5DC759E290D83B000BDBD95 /* AppDelegate.swift */,
 				A5DC75A0290D83B000BDBD95 /* SceneDelegate.swift */,
 				A5DC75BA290F13CC00BDBD95 /* Services */,
@@ -179,6 +190,7 @@
 				A5DC759F290D83B000BDBD95 /* AppDelegate.swift in Sources */,
 				A5DC75B9290D96E700BDBD95 /* WeatherCell.swift in Sources */,
 				A5C51715290F1BC800FF9C09 /* Constants.swift in Sources */,
+				A53D2FAE290FBB8C0070B3E1 /* WeatherListViewModel.swift in Sources */,
 				A5DC75B6290D883300BDBD95 /* AddWeatherCityViewController.swift in Sources */,
 				A5DC75A1290D83B000BDBD95 /* SceneDelegate.swift in Sources */,
 			);
