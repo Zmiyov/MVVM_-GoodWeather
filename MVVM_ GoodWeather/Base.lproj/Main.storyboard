@@ -8,6 +8,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="i84-W1-i9r">
+            <objects>
+                <tableViewController id="bE4-qd-Ggf" customClass="SettingsTableViewController" customModule="MVVM__GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="R2u-bs-tXf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" id="B5D-aB-Wie">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B5D-aB-Wie" id="HSC-ag-yWf">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bE4-qd-Ggf" id="cBg-po-0uY"/>
+                            <outlet property="delegate" destination="bE4-qd-Ggf" id="BAB-Fr-GXV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="mNG-Pe-qNY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Xnt-FS-dvW">
+                            <connections>
+                                <action selector="done" destination="bE4-qd-Ggf" id="Kzd-ZY-9wo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcc-vF-a6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="-747.15639810426535"/>
+        </scene>
         <!--GoodWeather-->
         <scene sceneID="36E-La-seb">
             <objects>
@@ -56,10 +91,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather" id="0OD-cx-rAH">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="SmH-hs-duH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" image="gearshape" catalog="system" id="SmH-hs-duH">
+                            <connections>
+                                <segue destination="IiV-37-Qkv" kind="presentation" identifier="SettingsTableViewController" modalPresentationStyle="fullScreen" id="Bb9-OG-nFh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e4B-sg-7E4">
                             <connections>
-                                <segue destination="EyF-nh-Qwa" kind="presentation" id="ZTS-yb-PIf"/>
+                                <segue destination="EyF-nh-Qwa" kind="presentation" identifier="AddWeatherCityViewController" id="ZTS-yb-PIf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,8 +190,27 @@
             </objects>
             <point key="canvasLocation" x="1410.7692307692307" y="-92.417061611374407"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="meF-yW-WLQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IiV-37-Qkv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ay-O4-bKj">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bE4-qd-Ggf" kind="relationship" relationship="rootViewController" id="LdO-rm-PnV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ggn-DS-Taa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470.76923076923077" y="-747.15639810426535"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
