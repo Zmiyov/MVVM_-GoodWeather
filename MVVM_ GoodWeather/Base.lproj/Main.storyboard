@@ -257,6 +257,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ynL-Xk-Pfe"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="o5f-3W-JB8" id="l0F-SI-l44"/>
+                        <outlet property="currentTemperatureLabel" destination="U9z-hE-Yte" id="kCX-NO-dTT"/>
+                        <outlet property="maxTempLabel" destination="pmJ-C2-3kh" id="UfN-Bi-e6n"/>
+                        <outlet property="minTempLabel" destination="UlB-yT-Ccf" id="Ea4-Bm-IaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5G-PX-jph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
