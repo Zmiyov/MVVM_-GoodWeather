@@ -82,6 +82,7 @@
                                 <connections>
                                     <outlet property="cityNameLabel" destination="Vjh-Dg-LCX" id="Dgh-tO-08o"/>
                                     <outlet property="temperatureLabel" destination="3HA-lE-o3D" id="I0m-1B-E2h"/>
+                                    <segue destination="REh-ol-Ewn" kind="show" identifier="WeatherDetailsViewController" id="a9A-tC-H4N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,17 +116,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZE-XU-uUE">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZE-XU-uUE" customClass="BindingTextField" customModule="MVVM__GoodWeather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="86" width="358" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-Hm-NIZ">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-Hm-NIZ" customClass="BindingTextField" customModule="MVVM__GoodWeather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="128" width="358" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-AD-772">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-AD-772" customClass="BindingTextField" customModule="MVVM__GoodWeather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="170" width="358" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -207,6 +208,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8U8-lX-bBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1410.7692307692307" y="-92.417061611374407"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="ApK-6O-cy3">
+            <objects>
+                <viewController id="REh-ol-Ewn" customClass="WeatherDetailsViewController" customModule="MVVM__GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SgM-qH-RHn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EOc-2e-sKk">
+                                <rect key="frame" x="100" y="351.33333333333331" width="190" height="141.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-3W-JB8">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9z-hE-Yte">
+                                        <rect key="frame" x="0.0" y="40.333333333333371" width="190" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-C2-3kh">
+                                        <rect key="frame" x="0.0" y="80.666666666666686" width="190" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlB-yT-Ccf">
+                                        <rect key="frame" x="0.0" y="120.99999999999999" width="190" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="220-sU-iYA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EOc-2e-sKk" firstAttribute="centerX" secondItem="SgM-qH-RHn" secondAttribute="centerX" id="2kC-6q-gRE"/>
+                            <constraint firstItem="EOc-2e-sKk" firstAttribute="centerY" secondItem="SgM-qH-RHn" secondAttribute="centerY" id="JFq-7T-UZf"/>
+                            <constraint firstItem="EOc-2e-sKk" firstAttribute="leading" secondItem="220-sU-iYA" secondAttribute="leading" constant="100" id="j4O-tS-G5J"/>
+                            <constraint firstItem="220-sU-iYA" firstAttribute="trailing" secondItem="EOc-2e-sKk" secondAttribute="trailing" constant="100" id="xQx-rE-P5P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ynL-Xk-Pfe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5G-PX-jph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="603"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="meF-yW-WLQ">
