@@ -15,7 +15,6 @@ struct Resource<T> {
 final class WebService {
     
     func load<T>(resource: Resource<T>, completion: @escaping (T?) -> ()) {
-        
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
             
             if let data = data {
@@ -27,5 +26,4 @@ final class WebService {
             }
         }.resume()
     }
-    
 }

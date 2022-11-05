@@ -8,26 +8,32 @@
 import Foundation
 import UIKit
 
+protocol SettingsDelegate {
+    func settingsDone(viewModel: SettingsViewModel)
+}
+
 class SettingsTableViewController: UITableViewController {
     
     private var settingsViewModel = SettingsViewModel()
+    var delegate: SettingsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @IBAction func done() {
+        if let delegate = self.delegate {
+            delegate.settingsDone(viewModel: self.settingsViewModel)
+        }
         dismiss(animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         tableView.visibleCells.forEach { cell in
             cell.accessoryType = .none
         }
-        
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
             let unit = Unit.allCases[indexPath.row]
@@ -52,9 +58,7 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let settingsItem = self.settingsViewModel.units[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-        
         cell.textLabel?.text = settingsItem.displayName
         
         if settingsItem == self.settingsViewModel.selectedUnit {
