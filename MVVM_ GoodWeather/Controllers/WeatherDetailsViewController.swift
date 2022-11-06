@@ -21,12 +21,9 @@ class WeatherDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         if let weatherVM = weatherViewModel {
-            self.cityNameLabel.text = weatherVM.name
-            self.currentTemperatureLabel.text = weatherVM.currentTemperature.temperature.formatAsDegree
+            self.cityNameLabel.text = weatherVM.name.value
+            self.currentTemperatureLabel.text = weatherVM.currentTemperature.temperature.value.formatAsDegree
         }
-
     }
-    
 }

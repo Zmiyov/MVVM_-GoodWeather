@@ -33,7 +33,7 @@ class BindingTextField: UITextField {
     @objc func textFieldDidChange(_ textField: UITextField) {
         
         if let text = textField.text {
-            self.textChangeClosure( text)
+            self.textChangeClosure(text)
         }
         
     }
